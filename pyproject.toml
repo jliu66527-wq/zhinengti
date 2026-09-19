@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "octop"
+version = "1.0.1"
+description = "Octop installed application source snapshot"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[project.scripts]
+octop = "octop.cli.main:cli"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["octop*"]
+
+[tool.setuptools.package-data]
+octop = ["**/*"]
