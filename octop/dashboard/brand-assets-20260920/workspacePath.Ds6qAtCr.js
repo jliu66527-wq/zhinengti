@@ -1,0 +1,1 @@
+function workspaceEntryPath(infoPath){if(infoPath.startsWith("/"))return infoPath;const normalized=infoPath.replace(/\\/g,"/").replace(/^\/+/,"");return normalized?`/${normalized}`:"/"}export{workspaceEntryPath as w};

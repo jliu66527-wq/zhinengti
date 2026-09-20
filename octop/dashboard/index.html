@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favico.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favico-6plus.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta
       name="viewport"
@@ -29,7 +29,7 @@
     <meta name="apple-mobile-web-app-title" content="Octop" />
     <!-- Web App Manifest -->
     <link rel="manifest" href="/manifest.json" />
-    <title>Octop</title>
+    <title>老己，你的好搭子</title>
     <!--
       First-paint boot splash: visible before JS chunks parse. React.createRoot
       replaces #root contents on mount, so this disappears automatically.
@@ -140,12 +140,12 @@
     <script>
       (function () {
         var KEY = "octop:chunk-reload";
-        // Firefox fires error on <link rel="modulepreload"> for /assets/*.js
+        // Firefox fires error on <link rel="modulepreload"> for /brand-assets-20260920/*.js
         // even when the file is fine; treating those as stale chunks caused
         // infinite location.reload() loops (and aborted real dynamic imports).
         var recovering = false;
         function isAsset(url) {
-          return typeof url === "string" && url.indexOf("/assets/") !== -1;
+          return typeof url === "string" && url.indexOf("/brand-assets-20260920/") !== -1;
         }
         function isStylesheetLink(el) {
           if (!el || el.tagName !== "LINK") return false;
@@ -203,12 +203,12 @@
         );
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index.Cyqpr3vI.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/vendor-react.DWWhhpb4.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-antd.BiOtz_xX.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-utils.C03FLvgG.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-icons.Br2_c-eL.js">
-    <link rel="stylesheet" crossorigin href="/assets/index.DZeFw1uK.css">
+    <script type="module" crossorigin src="/brand-assets-20260920/index.6plus-purple-20260920.js"></script>
+    <link rel="modulepreload" crossorigin href="/brand-assets-20260920/vendor-react.DWWhhpb4.js">
+    <link rel="modulepreload" crossorigin href="/brand-assets-20260920/vendor-antd.BiOtz_xX.js">
+    <link rel="modulepreload" crossorigin href="/brand-assets-20260920/vendor-utils.C03FLvgG.js">
+    <link rel="modulepreload" crossorigin href="/brand-assets-20260920/vendor-icons.Br2_c-eL.js">
+    <link rel="stylesheet" crossorigin href="/brand-assets-20260920/index.DZeFw1uK.css">
   </head>
   <body>
     <div id="root">
@@ -217,7 +217,7 @@
           <div id="octop-boot-ring"></div>
           <img
             id="octop-boot-logo"
-            src="/logo.svg"
+            src="/brand-logo-6plus.png"
             alt=""
             width="60"
             height="60"
