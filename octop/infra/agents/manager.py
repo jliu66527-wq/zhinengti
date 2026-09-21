@@ -21,6 +21,7 @@ from harness_agent.security.models import SecurityPolicy
 
 from octop.i18n.domains.agents import NO_MODELS_CONFIGURED, format_agent_start_error
 from octop.infra.agents.acp_settings import ACPSettingsStore
+from octop.infra.agents.harness_stream_compat import install_harness_stream_content_compat
 from octop.infra.agents.langfuse import LangfuseSettings, LangfuseSettingsStore
 from octop.infra.agents.media_generation import (
     MediaGenerationSettings,
@@ -425,6 +426,7 @@ class AgentManager:
         self._team_processor = team_processor
 
     async def boot(self) -> None:
+        install_harness_stream_content_compat()
         self._tool_guard_rules.ensure_seeded()
         providers = self._providers.build_harness_configs()
         self._harness_manager = HarnessAgentManager(
